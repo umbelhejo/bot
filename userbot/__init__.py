@@ -40,8 +40,7 @@ if version_info[0] < 3 or version_info[1] < 8:
 
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)
-CONFIG_CHECK = os.environ.get(
-    "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+CONFIG_CHECK = os.environ.get("", None)
 
 if CONFIG_CHECK:
     LOGS.info(
@@ -50,8 +49,8 @@ if CONFIG_CHECK:
     quit(1)
 
 # Telegram App KEY and HASH
-API_KEY = os.environ.get("API_KEY", None)
-API_HASH = os.environ.get("API_HASH", None)
+API_KEY = os.environ.get("API_KEY", "51780")
+API_HASH = os.environ.get("API_HASH", "98c709a8f323a25b244f410ce8d52556")
 
 
 # Userbot Session String
@@ -106,6 +105,9 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
+
+# Telegraph 
+TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", None)
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -207,5 +209,6 @@ USERS = {}
 COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
+ZALG_LIST = {}
 ISAFK = False
 AFKREASON = None
